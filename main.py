@@ -34,8 +34,8 @@ def left_pyramid(_n):
 def right_pyramid(_n):
     pattern = []
     for i in range(_n):
-        temp = '  ' * (_n-1-i)
-        temp += 'o ' * (i)
+        temp = '&nbsp;&nbsp;' * (_n-1-i)
+        temp += 'o&nbsp;' * (i)
         pattern.append(temp)
     return pattern
 
