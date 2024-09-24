@@ -27,15 +27,15 @@ def app2():
 def left_pyramid(_n):
     pattern = []
     for i in range(_n):
-        temp = 'o ' * (i+1)
+        temp = 'o_' * (i+1)
         pattern.append(temp)
     return pattern
 
 def right_pyramid(_n):
     pattern = []
     for i in range(_n):
-        temp = '&nbsp;&nbsp;' * (_n-1-i)
-        temp += 'o&nbsp;' * (i)
+        temp = '__' * (_n-1-i)
+        temp += 'o_' * (i)
         pattern.append(temp)
     return pattern
 
