@@ -15,7 +15,7 @@ def app1():
         pattern = left_pyramid(n)
         return render_template("/app1/result.html",paragraph=pattern)
 
-@app.rout("/right")
+@app.route("/right")
 def app2():
     if request.method == "GET":
         return render_template("/app2/index.html")
