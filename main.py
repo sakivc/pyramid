@@ -22,7 +22,7 @@ def app2():
     else:
         n = int(request.form["num"])
         pattern = right_pyramid(n)
-        return render_template("/app1/result.html",paragraph=pattern)
+        return render_template("/app2/result.html",paragraph=pattern)
 
 def left_pyramid(_n):
     pattern = []
