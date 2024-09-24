@@ -35,7 +35,7 @@ def right_pyramid(_n):
     pattern = []
     for i in range(_n):
         temp = '__' * (_n-1-i)
-        temp += 'o_' * (i)
+        temp += 'o_' * (i+1)
         pattern.append(temp)
     return pattern
 
