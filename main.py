@@ -27,7 +27,7 @@ def app2():
 def left_pyramid(_n):
     pattern = []
     for i in range(_n):
-        temp = 'o '
+        temp = 'o ' * (i+1)
         pattern.append(temp)
     return pattern
 
