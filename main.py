@@ -6,7 +6,7 @@ app = Flask(__name__)
 def home():
     return "HOME PAGE."
 
-@app.route("/app1",methods=["POST", "GET"])
+@app.route("/left",methods=["POST", "GET"])
 def app1():
     if request.method == "GET":
         return render_template("/app1/index.html")
@@ -15,12 +15,27 @@ def app1():
         pattern = left_pyramid(n)
         return render_template("/app1/result.html",paragraph=pattern)
 
+@app.rout("/right")
+def app2():
+    if request.method == "GET":
+        return render_template("/app2/index.html")
+    else:
+        n = int(request.form["num"])
+        pattern = right_pyramid(n)
+        return render_template("/app1/result.html",paragraph=pattern)
+
 def left_pyramid(_n):
     pattern = []
     for i in range(_n):
-        temp = ''
-        for j in range(i):
-            temp += "o "
+        temp = ' '
+        pattern.append(temp)
+    return pattern
+
+def right_pyramid(_n):
+    pattern = []
+    for i in range(_n):
+        temp = '  ' * (_n-1-i)
+        temp += 'o ' * (i)
         pattern.append(temp)
     return pattern
 
